@@ -1,50 +1,187 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><html>
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-h2 {color:black;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continental Gt 650</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-<h2>These are the deatils about the dog soft toy
-<table border=1 height="150" width="300" >
-<tr>
-<th>Name</th>
-<th>Height</th>
-<th>Color</th>
-</tr>
-<tr>
-<td>Dog</td>
-<td>2 feet</td>
-<td>Golden</td>
-<tr>
-</table>
-<h2> This is a cute dog soft toy which you can buy from our webpage.
-<img src="https://m.media-amazon.com/images/I/412AoDWt3xL.jpg" height="300" width="300" >
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRro0AXkUMv7FwbpKxGE_wf55E9ydTiXaMK8RlNc7Ieig&s=10" height="300" width="300" >
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZnhGB5EQ5BfVF3uBVDZc_4Ig2RtBlmJt19dYM6xeCuQ&s" height="300" width="300" >
-<h2>You can contact us by filling your details below </h2>
 
-<form action="/submit" method="POST">
-  <label for="fname">First Name:</label><br>
-  <input type="text" id="fname" name="firstname" placeholder="Enter your name"><br><br>
-    <label for="lname">Last Name:</label><br>
-  <input type="text" id="lname" name="lastname" placeholder="Enter your last name"><br><br>
-        <label for="phone" >Phone:</label><br>
-    <input type="tel" id="phone" name="phone" placeholder="123-456-7890"><br><br>
-  <label for="email">Email:</label><br> 
-  <input type="email" id="email" name="user_email" placeholder="Enter your email"><br><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
-  <label for="subject">Topic:</label><br>
-  <select id="subject" name="topic">
-    <option value="support">Technical Support</option>
-    <option value="sales">Sales Inquiry</option>
-    <option value="other">Other</option>
-  </select><br><br>
-  <button type="submit">Send Message</button>
-</form>
-<ul> 
-<li> Webpage made by Abdul Ahad Mirza.
-<li> My first Webpage.
+    <header>
+        <h1>My Website</h1>
+        <p> Description of Continental Gt 650</p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Welcome</h2>
+            <p></p>
+         
+        <h1>Continental GT 650</h1>
+
+        <p>
+            The Royal Enfield Continental GT 650 is a café racer motorcycle
+            known for its classic design and powerful performance.
+        </p>
+
+        <h3>Key Features</h3>
+        <ul>
+            <li>648cc Twin Engine</li>
+            <li>47 bhp Power</li>
+            <li>6-speed Gearbox</li>
+            <li>Retro Café Racer Style</li>
+        </ul>
+
+        <h3>Price</h3>
+        <p>Approx ₹3.19 – ₹3.45 Lakh (India)</p>
+        
+        <h2>Continental GT 650 Gallery</h2>
+
+<div class="slider">
+    <img id="slide" src="gt1.jpg">
+</div>
+
+<div class="buttons">
+    <button onclick="prev()">❮ Prev</button>
+    <button onclick="next()">Next ❯</button>
+</div>
+
+<style>
+    .slider {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+    }
+    .slider img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .buttons {
+        text-align: center;
+        margin-top: 10px;
+    }
+    button {
+        padding: 8px 12px;
+        margin: 5px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    let images = ["https://i.pinimg.com/736x/18/a0/fc/18a0fc4cc7344cbd329f81d3c0b88678.jpg", "https://i.pinimg.com/736x/43/1f/8e/431f8e717b41671118a47730943debd4.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkag4UaNs2f4pQCnRl_h93qJYQXoGU7f4dxHbpfPEvNQ&s=10"];
+    let index = 0;
+
+    function next() {
+        index = (index + 1) % images.length;
+        document.getElementById("slide").src = images[index];
+    }
+
+    function prev() {
+        index = (index - 1 + images.length) % images.length;
+        document.getElementById("slide").src = images[index];
+    }
+</script>
+<h2>Technical Specifications</h2>
+<button class="accordion">Engine</button>
+<div class="panel">
+  <p>648cc, Parallel Twin, 4-stroke</p>
+</div>
+
+<button class="accordion">Power & Torque</button>
+<div class="panel">
+  <p>47 bhp @ 7250 rpm, 52 Nm @ 5250 rpm</p>
+</div>
+
+<button class="accordion">Transmission</button>
+<div class="panel">
+  <p>6-speed gearbox</p>
+</div>
+<h2>Customer Reviews</h2>
+<div style="background:#f4f4f4;padding:10px;border-radius:8px;margin-bottom:5px;">
+  <p><strong>Meen:</strong> Love the café racer style, smooth ride!</p>
+</div>
+<div style="background:#f4f4f4;padding:10px;border-radius:8px;margin-bottom:5px;">
+  <p><strong>Aatmaram:</strong> Engine power is amazing, handles well on highways.</p>
+</div>
+<div style="background:#f4f4f4;padding:10px;border-radius:8px;margin-bottom:5px;">
+  <p><strong>Multan:</strong> Retro design with modern performance. Highly recommended.</p>
+</div>
+<button onclick="openBike()">View 3D Bike</button>
+
+<script>
+    function openBike() {
+        window.location.href = "page2.html";
+    }
+</script>
+<footer class="contact-footer">
+  <h2>Contact Me</h2>
+  <p>For more details, feel free to contact me</p>
+
+  <div class="contact-links">
+    <a href="https://www.instagram.com/i._.abdul.ahad_" target="_blank">
+      📸 Instagram: i._.abdul.ahad_<br>
+    </a>
+
+    <a href="mailto:abdulahadmirza2710@gmail.com">
+      📧 abdulahadmirza2710@gmail.com
+    </a>
+  </div>
+
+  <p class="copyright">
+    © 2025 | Designed by Abdul Ahad
+  </p>
+</footer>
 </body>
 </html>
